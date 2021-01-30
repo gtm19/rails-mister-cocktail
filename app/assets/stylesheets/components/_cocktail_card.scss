@@ -1,5 +1,29 @@
 .cocktail-card {
   background: white;
   margin: 10px;
-  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: 1px solid $light-yellow;
+
+  .cocktail-card-body {
+    padding: 10px 20px 30px 20px;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: -16px;
+    right: 20px;
+    box-shadow: 0 0 6px $dark-pink;
+  }
+}
+
+.cocktail-card-img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
 }
