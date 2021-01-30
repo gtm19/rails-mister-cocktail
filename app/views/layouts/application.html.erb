@@ -14,7 +14,7 @@
   <body>
     <div id="noisy-background"></div>
     <nav class="navbar navbar-expand-sm bg-primary">
-      <a class="navbar-brand text-secondary" href="#"><h3 class="thick-yellow-underline">Hard Shake</h3></a>
+      <%= link_to content_tag(:h3, "Hard Shake", class: "thick-yellow-underline"), cocktails_path, class: "navbar-brand text-secondary" %>
     </nav>
     <div class="container">
       <%= yield %>
