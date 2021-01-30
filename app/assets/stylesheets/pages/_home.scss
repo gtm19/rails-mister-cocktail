@@ -1,1 +1,9 @@
 // Specific CSS for your home-page
+.welcome-container {
+  height: 100vh;
+}
+
+#welcome {
+  border: 4px solid $primary;
+  border-radius: 16px;
+}
