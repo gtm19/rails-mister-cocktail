@@ -1,0 +1,14 @@
+#noisy-background {
+  background-image: asset-url('background.jpg');
+  filter: blur(1px);
+  background-color: $body-bg;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  position: fixed;
+  opacity: 0.1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
