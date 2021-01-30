@@ -1,0 +1,11 @@
+.thick-blue-underline {
+  border-bottom: 16px solid $dark-blue;
+  display: inline-block;
+  line-height: 0.4;
+}
+
+.thick-yellow-underline {
+  border-bottom: 16px solid $light-yellow;
+  display: inline-block;
+  line-height: 0.4;
+}
