@@ -16,3 +16,26 @@ ingredients.flatten[1].each do |array|
   p "Adding #{ingredient} to db"
   Ingredient.create(name: ingredient)
 end
+
+p "Deleting all cocktails"
+Cocktail.destroy_all
+
+10.times do
+  cocktail_name = Faker::Hipster.sentence(word_count: 2)
+  p "Adding #{cocktail_name} to db"
+  Cocktail.create(
+    name: cocktail_name
+  )
+end
+
+p "Deleting all doses"
+Dose.destroy_all
+
+Cocktail.all.each do |cocktail|
+  num_of_ingredients = rand(2..4)
+  ingredients = Ingredient.all.sample(num_of_ingredients)
+  ingredients.each do |ingredient|
+    description = "#{["25ml", "50ml", "Dash of"].sample}"
+    cocktail.doses.create(description: description, ingredient: ingredient)
+  end
+end
