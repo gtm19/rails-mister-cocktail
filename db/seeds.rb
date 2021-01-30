@@ -21,7 +21,7 @@ p "Deleting all cocktails"
 Cocktail.destroy_all
 
 10.times do
-  cocktail_name = Faker::Hipster.sentence(word_count: 2)
+  cocktail_name = Faker::Hipster.sentence(word_count: 2, supplemental: false, random_words_to_add: 0)
   p "Adding #{cocktail_name} to db"
   Cocktail.create(
     name: cocktail_name

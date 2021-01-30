@@ -1,4 +1,15 @@
-<h1 class="mt-5 display-1 thick-blue-underline">Cocktails</h1>
+<h1 class="my-5 display-1 thick-blue-underline">Cocktails</h1>
 <div id="cocktails">
+  
+  <% @cocktails.each do |cocktail| %>
+    <div class="cocktail-card" style="width: 18rem;">
+    <img src="" class="cocktail-card-img-top" alt="...">
+    <div class="cocktail-card-body">
+      <h5 class="cocktail-card-title"><h4><%= cocktail.name %></h4></h5>
+      <p class="cocktail-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">View recipe</a>
+    </div>
+  </div>
+  <% end %>
   
 </div>
