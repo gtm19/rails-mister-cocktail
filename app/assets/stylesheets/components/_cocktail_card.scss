@@ -25,7 +25,13 @@
     bottom: -25px;
     right: 20px;
     box-shadow: 0 0 6px $dark-pink;
+    transition: all 500ms;
+
+    &:hover{
+      transform: rotate(45deg);
+    }
   }
+
 }
 
 .cocktail-card-img {

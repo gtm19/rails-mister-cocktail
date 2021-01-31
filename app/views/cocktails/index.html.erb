@@ -1,11 +1,11 @@
-<h1 class="my-5 display-1 thick-blue-underline">Cocktails</h1>
+<h1 class="my-5 display-1 thick-underline blue-underline">Cocktails</h1>
 <div id="cocktails">
   <% @cocktails.each do |cocktail| %>
     <div class="cocktail-card">
     <%= image_tag "cocktail.jpg", alt: "A cocktail", class: "cocktail-card-img" %>
     <div class="cocktail-card-body">
       <h5><%= cocktail.name %></h5>
-      <%= link_to icon("fas", "chevron-right"), cocktail_path(cocktail), class: "btn btn-primary" %>
+      <%= link_to icon("fas", "glass-martini-alt"), cocktail_path(cocktail), class: "btn btn-primary" %>
     </div>
   </div>
   <% end %>

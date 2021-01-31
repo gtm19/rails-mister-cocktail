@@ -1,11 +1,14 @@
-.thick-blue-underline {
-  border-bottom: 16px solid $dark-blue;
-  display: inline-block;
-  line-height: 0.4;
-}
+.thick-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 20%;
+  text-decoration-skip-ink: none;
+  text-underline-offset: -10%;
+  
+  &.blue-underline {
+    text-decoration-color: $dark-blue;
+  }
 
-.thick-yellow-underline {
-  border-bottom: 16px solid $light-yellow;
-  display: inline-block;
-  line-height: 0.4;
+  &.yellow-underline {
+    text-decoration-color: $light-yellow;
+  }
 }
