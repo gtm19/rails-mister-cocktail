@@ -13,7 +13,7 @@
 
   <body>
     <div id="noisy-background"></div>
-    <nav class="navbar bg-primary">
+    <nav class="navbar fixed-top bg-primary">
       <%= link_to content_tag(:h3, "Hard Shake", class: "thick-underline yellow-underline"), cocktails_path, class: "navbar-brand text-secondary" %>
       <div>
         <%= link_to icon("fas", "dice"), cocktails_random_path, class: "btn btn-secondary" %>
