@@ -11,12 +11,18 @@
   border: 1px solid $light-yellow;
 
   .cocktail-card-body {
-    padding: 10px 20px 30px 20px;
+    margin: 30px 20px 40px 20px;
   }
 
   .btn {
     position: absolute;
-    bottom: -16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -25px;
     right: 20px;
     box-shadow: 0 0 6px $dark-pink;
   }
