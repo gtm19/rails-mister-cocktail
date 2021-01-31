@@ -16,6 +16,11 @@ class CocktailsController < ApplicationController
   def create
   end
 
+  def random
+    @cocktail = Cocktail.find(Cocktail.pluck(:id).sample)
+    render :show
+  end
+
   private
   
   def set_cocktail
