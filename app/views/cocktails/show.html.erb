@@ -1,1 +1,9 @@
 <h1 class="my-5 display-1 thick-underline blue-underline"><%= @cocktail.name %></h1>
+<%= image_tag "cocktail.jpg", alt: "A cocktail", class: "rounded" %>
+<% @cocktail.doses %>
+<ul>
+<% @cocktail.doses.each do |dose| %>
+  <li><%= dose.description %> <%= dose.ingredient.name %></li>  
+<% end %>
+</ul>
+
