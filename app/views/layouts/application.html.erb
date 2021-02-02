@@ -17,7 +17,7 @@
       <%= link_to content_tag(:h3, "Hard Shake", class: "thick-underline yellow-underline"), cocktails_path, class: "navbar-brand text-secondary" %>
       <div>
         <%= link_to icon("fas", "dice"), cocktails_random_path, class: "btn btn-secondary" %>
-        <button class="btn btn-secondary">Add Recipe <%= icon("fas", "plus") %></button>
+        <%= link_to "Add Recipe", new_cocktail_path, class: "btn btn-secondary" %>
       </div>
     </nav>
     <div class="container">
