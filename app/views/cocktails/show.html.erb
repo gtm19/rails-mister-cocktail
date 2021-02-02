@@ -1,9 +1,21 @@
 <h1 class="my-5 display-1 thick-underline blue-underline"><%= @cocktail.name %></h1>
-<%= image_tag "cocktail.jpg", alt: "A cocktail", class: "rounded" %>
-<% @cocktail.doses %>
-<ul>
-<% @cocktail.doses.each do |dose| %>
-  <li><%= dose.description %> <%= dose.ingredient.name %></li>  
-<% end %>
-</ul>
-
+<div class="row">
+  <div class="col col-md-8">
+    <%= image_tag "cocktail.jpg", alt: "A cocktail", class: "rounded" %>
+  </div>
+  <div class="col col-md-4">
+    <ul>
+      <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.description %> <%= dose.ingredient.name %></li>  
+      <% end %>
+    </ul>
+    <h3 class="thick-underline blue-underline">
+      Add a dose
+    </h3>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.association :ingredient %>
+      <%= f.input :description, placeholder: "e.g. 25ml" %>
+      <%= f.submit "Add dose", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
