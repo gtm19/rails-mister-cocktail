@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .welcome-container {
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - #{2 * $body-margin});
   min-width: 100vw;
   display: flex;
   justify-content: center;
