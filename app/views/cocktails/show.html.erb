@@ -16,7 +16,7 @@
       Add a dose
     </h3>
     <%= simple_form_for [@cocktail, @dose] do |f| %>
-      <%= f.association :ingredient %>
+      <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
       <%= f.input :description, placeholder: "e.g. 25ml" %>
       <%= f.submit "Add dose", class: "btn btn-primary" %>
     <% end %>
