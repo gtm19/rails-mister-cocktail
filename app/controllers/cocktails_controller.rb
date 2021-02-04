@@ -1,6 +1,7 @@
 class CocktailsController < ApplicationController
 
   before_action :set_cocktail, only: [:show]
+  before_action :get_ingredients, only: [:show]
 
   def index
     @cocktails = Cocktail.all
@@ -8,7 +9,6 @@ class CocktailsController < ApplicationController
 
   def show
     @dose = Dose.new
-    @ingredients = Ingredient.all
   end
 
   def new
@@ -27,7 +27,7 @@ class CocktailsController < ApplicationController
 
   def random
     @cocktail = Cocktail.find(Cocktail.pluck(:id).sample)
-    render :show
+    redirect_to cocktail_path(@cocktail)
   end
 
   private
@@ -38,5 +38,9 @@ class CocktailsController < ApplicationController
 
   def cocktail_params
     params.require(:cocktail).permit(:name)
+  end
+
+  def get_ingredients
+    @ingredients = Ingredient.all
   end
 end
