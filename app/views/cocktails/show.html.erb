@@ -6,7 +6,10 @@
   <div class="col col-md-4">
     <ul>
       <% @cocktail.doses.each do |dose| %>
-      <li><%= dose.description %> <%= dose.ingredient.name %></li>  
+      <li>
+        <%= dose.description %> 
+        <%= dose.ingredient.name %> 
+        <%= link_to icon("fas", "trash-alt"), cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } %> </li>  
       <% end %>
     </ul>
     <h3 class="thick-underline blue-underline">
