@@ -8,6 +8,11 @@
   row-gap: 20px;
 }
 
+.cocktail-dose {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 992px) {
   #cocktails {
     grid-template-columns: 1fr 1fr 1fr;

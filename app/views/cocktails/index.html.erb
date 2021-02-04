@@ -2,7 +2,11 @@
 <div id="cocktails">
   <% @cocktails.each do |cocktail| %>
     <div class="cocktail-card">
-    <%= image_tag "cocktail.jpg", alt: "A cocktail", class: "cocktail-card-img" %>
+      <% if cocktail.photo.attached? %>
+        <%= cl_image_tag cocktail.photo.key, class: "cocktail-card-img" %>
+      <% else %>
+        <%= image_tag "cocktail.jpg", alt: "A cocktail", class: "cocktail-card-img" %>
+      <% end %>
     <div class="cocktail-card-body">
       <h5><%= cocktail.name %></h5>
       <%= link_to icon("fas", "glass-martini-alt"), cocktail_path(cocktail), class: "btn btn-primary" %>
