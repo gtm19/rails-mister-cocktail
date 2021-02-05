@@ -2,7 +2,14 @@
 <div class="row">
   <div class="col-12 col-lg-8">
     <% if @cocktail.photo.attached? %>
-      <%= cl_image_tag @cocktail.photo.key, class: "mb-3 rounded cocktail-img", crop: :fill, :gravity=>"north", :height=>400, :quality=>85, :width=>600, :crop=>"pad" %>
+      <%= cl_image_tag @cocktail.photo.key,
+      class: "mb-3 rounded cocktail-img",
+      crop: :fill,
+      gravity: "north",
+      height: 400,
+      quality: 85,
+      width: 600,
+      crop: "pad" %>
     <% else %>
       <%= image_tag "cocktail.jpg", alt: "A cocktail", class: "mb-3 rounded cocktail-img" %>
     <% end %>
@@ -20,7 +27,7 @@
       Add a dose
     </h3>
     <%= simple_form_for [@cocktail, @dose] do |f| %>
-      <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
+      <%= f.association :ingredient, collection: Ingredient.order('name ASC'), input_html: { class: "select2" } %>
       <%= f.input :description, placeholder: "e.g. 25ml" %>
       <%= f.submit "Add dose", class: "btn btn-primary" %>
     <% end %>
