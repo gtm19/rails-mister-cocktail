@@ -1,9 +1,9 @@
-<h1 class="my-5 display-1 thick-underline blue-underline">Cocktails</h1>
+<h1 class="my-5 display-3 thick-underline blue-underline">Cocktails</h1>
 <div id="cocktails">
   <% @cocktails.each do |cocktail| %>
     <div class="cocktail-card">
       <% if cocktail.photo.attached? %>
-        <%= cl_image_tag cocktail.photo.key, class: "cocktail-card-img" %>
+        <%= cl_image_tag cocktail.photo.key, class: "cocktail-card-img", :gravity=>"north", :height=>180, :quality=>85, :width=>248, :crop=>"lpad" %>
       <% else %>
         <%= image_tag "cocktail.jpg", alt: "A cocktail", class: "cocktail-card-img" %>
       <% end %>
@@ -13,5 +13,4 @@
     </div>
   </div>
   <% end %>
-  
 </div>

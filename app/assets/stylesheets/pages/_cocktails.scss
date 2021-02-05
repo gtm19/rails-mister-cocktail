@@ -13,6 +13,12 @@
   justify-content: space-between;
 }
 
+.cocktail-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 992px) {
   #cocktails {
     grid-template-columns: 1fr 1fr 1fr;
